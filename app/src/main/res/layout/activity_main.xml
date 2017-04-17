@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -9,98 +8,63 @@
     android:clipChildren="false"
     android:orientation="vertical"
     tools:context="com.beicai.yyvoice.MainActivity">
-    <LinearLayout
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:layout_above="@+id/bottom">
+
+
+    </FrameLayout>
+
+    <RadioGroup
         android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="@color/snow"
+        android:gravity="bottom"
+        android:background="@color/whitesmoke"
         android:clipChildren="false"
         android:orientation="horizontal"
 
         >
 
         <RadioButton
-            android:id="@+id/frist_bt"
+            android:id="@+id/rb_home"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/tab_live_p"
+            android:drawableBottom="@mipmap/tab_live_p"
             android:gravity="center" />
 
         <ImageView
+            android:id="@+id/iv_pupu"
             android:layout_width="0dip"
             android:layout_height="70dip"
             android:layout_marginTop="-30dp"
-            android:layout_weight="1.0"
+            android:layout_weight="1"
             android:src="@mipmap/tab_room" />
 
         <RadioButton
-            android:id="@+id/re_bt_mine"
+            android:id="@+id/rb_me"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/tab_me"
+            android:drawableBottom="@mipmap/tab_me"
             android:gravity="center" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/darkcyan"
-        android:orientation="horizontal">
+    </RadioGroup>
 
 
-        <ImageView
-            android:id="@+id/iv_sousuo"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:src="@mipmap/title_button_search" />
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@color/darkcyan"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            app:tabIndicatorColor="@color/snow"
-            app:tabIndicatorHeight="2dp"
-            app:tabMode="scrollable"
-            app:tabSelectedTextColor="@color/snow"
-            app:tabTextColor="@color/gray_cc" />
+</LinearLayout>
 
 
-        <ImageView
-            android:id="@+id/iv_xinxi"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"
-            android:src="@mipmap/title_button_more" />
-    </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/framelayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
-    </FrameLayout>
-
-
-</RelativeLayout>

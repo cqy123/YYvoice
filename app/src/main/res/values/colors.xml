@@ -152,4 +152,8 @@
     <color name="gray_white">#F4F4F4</color>
     <color name="thirty_transparent_black">#4d000000</color>
     <color name="green">#00FF00</color>
+
+
+
+    <color name="dividerColor">#ECE1E3</color>
 </resources>
